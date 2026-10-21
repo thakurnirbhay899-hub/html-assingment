@@ -1,0 +1,47 @@
+# Assignment 8 - Refactor the resume page to use semantic containers
+
+In this assignment, you need to refactor your previous resume page by replacing generic or plain text blocks with proper semantic HTML5 containers (such as `<header>`, `<main>`, `<section>`, `<article>`, and `<footer>`)[span_1](start_span)[span_1](end_span).
+
+## Steps & Instructions
+1. Open your previous resume HTML file.
+2. Wrap the top header content inside a `<header>` element.
+3. Use a `<main>` container for the primary content of the page.
+4. Wrap individual sections like Education, Skills, and Experience inside separate `<section>` elements.
+5. Use a `<footer>` element at the bottom for contact info or copyright details.
+
+## Code Example (`resume.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Semantic Resume</title>
+</head>
+<body>
+    <header>
+        <h1>Nirbhay Thakur</h1>
+        <p>BCA Artificial Intelligence Student</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Education</h2>
+            <p>Invertis University, Bareilly - BCA (AI)</p>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <ul>
+              <li>Java Programming</li>
+                <li>Python Programminga</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>Contact: email@example.com</p>
+    </footer>
+</body>
+</html>
