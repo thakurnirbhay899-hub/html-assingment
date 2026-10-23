@@ -1,0 +1,52 @@
+# Assignment 14 - Improve an Earlier Assignment Page Using Correct Semantic Tags
+
+In this assignment, you need to take one of your earlier assignment pages (such as your college or course info page) and improve its structure by replacing generic containers with correct semantic HTML5 tags[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span).
+
+## Steps & Instructions
+1. Select an earlier assignment file (e.g., `college-info.html`).
+2. Review the code for generic elements or plain text blocks.
+3. Replace them with proper semantic elements like `<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, and `<footer>`.
+4. Save the file and test it using Live Server.
+
+## Code Example (`improved-page.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Improved Semantic Page</title>
+</head>
+<body>
+    <header>
+        <h1>Invertis University, Bareilly</h1>
+        <nav>
+            <a href="#overview">Overview</a> | 
+            <a href="#subjects">Subjects</a>
+        </nav>
+    </header>
+
+    <main>
+        <article>
+            <section id="overview">
+                <h2>Course Overview</h2>
+                <p>Bachelor of Computer Applications in Artificial Intelligence.</p>
+            </section>
+
+            <section id="subjects">
+                <h2>Core Subjects</h2>
+                <ul>
+                    <li>Java Programming</li>
+                    <li>HTML & CSS</li>
+                    <li>Artificial Intelligence Basics</li>
+                </ul>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nirbhay Thakur. All rights reserved.</p>
+    </footer>
+</body>
+</html>

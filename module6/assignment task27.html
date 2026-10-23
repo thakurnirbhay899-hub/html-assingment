@@ -1,0 +1,81 @@
+# Assignment 27 - Create a Responsive Grid Layout Using CSS Grid
+
+In this assignment, you need to build a responsive multi-column layout using CSS Grid properties (`display: grid`, `grid-template-columns`, and `gap`).
+
+## Steps & Instructions
+1. Open your file named `assignment task27.html` in `module6`.
+2. Set up a container `<div>` with multiple child cards or items.
+3. Apply CSS Grid styles to the container:
+   - `display: grid;`
+   - `grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));` for responsive columns.
+   - `gap: 20px;` for spacing between items.
+4. Save the file and preview it using Live Server.
+
+## Code Example (`assignment task27.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .grid-item {
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .grid-item h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+
+        .grid-item p {
+            color: #555;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Responsive CSS Grid Layout</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <h3>Card One</h3>
+            <p>This is the first card item styled inside a responsive CSS grid container.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Card Two</h3>
+            <p>This is the second card item adapting automatically to screen size.</p>
+        </div>
+        <div class="grid-item">
+            <h3>Card Three</h3>
+            <p>This is the third card item showcasing clean layout spacing and gaps.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,79 @@
+7
+# Assignment 26 - Create a Simple Card Component Layout with CSS
+
+In this assignment, you need to design and style a reusable card component layout using CSS (including background colors, border radius, padding, and subtle box shadows for depth).
+
+## Steps & Instructions
+1. Create a new file in VS Code named `card.html`.
+2. Set up a container structure using HTML (`<div>` elements for the card and its content sections).
+3. Apply CSS properties to style the card:
+   - Fixed or maximum width (e.g., `350px`).
+   - Padding inside the card for spacing.
+   - Background color and clean border radius.
+   - Subtle `box-shadow` to give a floating/card effect.
+4. Save the file and preview it using Live Server.
+
+## Code Example (`card.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Card Component</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7f6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .card {
+            background-color: #ffffff;
+            width: 320px;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h2 {
+            margin-top: 0;
+            color: #2c3e50;
+            font-size: 1.4em;
+        }
+
+        .card p {
+            color: #555;
+            line-height: 1.5;
+            font-size: 0.95em;
+        }
+
+        .card-btn {
+            display: inline-block;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 4px;
+            margin-top: 15px;
+            font-weight: bold;
+        }
+
+        .card-btn:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h2>Card Component Title</h2>
+        <p>This is a clean and reusable card component layout styled using CSS. It features padding, a rounded border, and a soft box shadow.</p>
+        <a href="#" class="card-btn">Learn More</a>
+    </div>
+</body>
+</html>

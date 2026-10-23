@@ -1,0 +1,76 @@
+# Assignment 25 - Create a Responsive Navigation Bar Using CSS Flexbox
+
+In this assignment, you need to build a clean navigation bar and align its items horizontally using CSS Flexbox properties (`display: flex`, `justify-content`, and `align-items`).
+
+## Steps & Instructions
+1. Create a new file in VS Code named `navbar.html`.
+2. Add a `<header>` element containing a logo/title and a `<nav>` list with links.
+3. Apply CSS Flexbox to the header or nav container to space out the brand title and links neatly across the screen.
+4. Add hover effects for the navigation links.
+5. Save the file and preview it using Live Server.
+
+## Code Example (`navbar.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Navigation Bar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f7f6;
+        }
+
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 1em;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #1abc9c;
+        }
+
+        main {
+            padding: 40px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Nirbhay Thakur</div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Flexbox Navigation Demo</h2>
+        <p>This navigation bar is styled using CSS Flexbox for clean and responsive alignment.</p>
+    </main>
+</body>
+</html>

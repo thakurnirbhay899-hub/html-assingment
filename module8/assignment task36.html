@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Apple Photos style CSS Grid gallery by Nirbhay Thakur.">
+  <title>Photos – Nirbhay Thakur</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", Roboto, sans-serif;
+      background: #f5f5f7;
+      color: #1d1d1f;
+      padding: 2.5rem 1.5rem;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    header {
+      max-width: 1100px;
+      margin: 0 auto 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+    }
+
+    .header__title h1 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      letter-spacing: -0.5px;
+    }
+
+    .header__title p {
+      color: #86868b;
+      font-size: 0.95rem;
+      font-weight: 500;
+      margin-top: 0.2rem;
+    }
+
+    .header__tag {
+      background: #e8e8ed;
+      color: #1d1d1f;
+      padding: 0.4rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-auto-rows: 200px;
+      gap: 16px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .gallery figure {
+      overflow: hidden;
+      border-radius: 18px;
+      position: relative;
+      background: #e5e5ea;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+      transition: transform 0.3s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.3s ease;
+    }
+
+    .gallery figure:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+
+    .gallery figure:hover img {
+      transform: scale(1.05);
+    }
+
+    .gallery figcaption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 0.75rem 1rem;
+      background: rgba(255, 255, 255, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      color: #1d1d1f;
+      font-size: 0.85rem;
+      font-weight: 600;
+      letter-spacing: -0.2px;
+      border-top: 1px solid rgba(255, 255, 255, 0.4);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      opacity: 0.95;
+    }
+
+    .gallery figcaption span {
+      font-size: 0.75rem;
+      color: #86868b;
+      font-weight: 500;
+    }
+
+    .wide {
+      grid-column: span 2;
+    }
+
+    .tall {
+      grid-row: span 2;
+    }
+
+    .big {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    @media (max-width: 800px) {
+      .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .gallery {
+        grid-template-columns: 1fr;
+        grid-auto-rows: 220px;
+      }
+
+      .wide,
+      .big {
+        grid-column: auto;
+      }
+
+      .tall {
+        grid-row: auto;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="header__title">
+      <h1>Library</h1>
+      <p>Curated Memories · Abdul Sami</p>
+    </div>
+    <div class="header__tag">7 Photos</div>
+  </header>
+
+  <main class="gallery">
+    <figure class="big">
+      <img src="https://picsum.photos/id/1015/800/800" alt="Serene river surrounded by forested mountains">
+      <figcaption>Valley River <span>Featured</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/id/160/400/400" alt="Minimal laptop setup on modern wooden desk">
+      <figcaption>Workspace <span>Today</span></figcaption>
+    </figure>
+
+    <figure class="tall">
+      <img src="https://picsum.photos/id/1025/400/800" alt="Pug wrapped comfortably in a soft blanket">
+      <figcaption>Morning Light <span>Portrait</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/id/1068/400/400" alt="Minimalist architecture with clean modern blue lines">
+      <figcaption>Architecture <span>Yesterday</span></figcaption>
+    </figure>
+
+    <figure class="wide">
+      <img src="https://picsum.photos/id/1036/800/400" alt="Snow covered fir trees in mist">
+      <figcaption>Winter Horizon <span>Landscape</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/id/201/400/400" alt="Modern computer setup with code dashboard">
+      <figcaption>Development <span>Project</span></figcaption>
+    </figure>
+
+    <figure>
+      <img src="https://picsum.photos/id/1058/400/400" alt="Sunlight reflecting across ocean water">
+      <figcaption>Coastline <span>Favorites</span></figcaption>
+    </figure>
+  </main>
+</body>
+
+</html>

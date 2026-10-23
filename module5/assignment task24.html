@@ -1,0 +1,64 @@
+# Assignment 24 - Style a Profile Card Using the CSS Box Model
+
+In this assignment, you need to apply the CSS Box Model concepts—such as padding, margins, borders, width, and background styling—to create a professional profile card component.
+
+## Steps & Instructions
+1. Create a new file in VS Code named `profile-card.html`.
+2. Set up a container `<div>` with a specific class (e.g., `.profile-card`).
+3. Apply Box Model properties:
+   - **Width** and **max-width** to control card size.
+   - **Padding** for internal spacing between content and border.
+   - **Margin** for centering and external spacing.
+   - **Border** and **border-radius** for clean edges.
+   - **Box-shadow** for depth.
+4. Save the file and preview it using Live Server.
+
+## Code Example (`profile-card.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card - Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .profile-card {
+            background-color: #ffffff;
+            width: 300px;
+            padding: 25px;
+            margin: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .profile-card h2 {
+            margin-top: 0;
+            color: #2c3e50;
+        }
+
+        .profile-card p {
+            color: #555;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-card">
+        <h2>Nirbhay Thakur</h2>
+        <p>BCA Artificial Intelligence Student at Invertis University, Bareilly.</p>
+    </div>
+</body>
+</html>

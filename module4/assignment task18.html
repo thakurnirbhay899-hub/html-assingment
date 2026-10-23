@@ -1,0 +1,74 @@
+# Assignment 18 - Build an E-Commerce-Style Product Size-Chart Table
+
+In this assignment, you need to create an e-commerce-style product size-chart table using HTML table elements (`<table>`, `<tr>`, `<th>`, `<td>`) to display size measurements clearly.
+
+## Steps & Instructions
+1. Create a new file in VS Code named `size-chart.html`.
+2. Add a `<table>` element with a border or styling structure.
+3. Use `<thead>` and `<th>` tags for column headers (such as Size, Chest, Waist, Length).
+4. Use `<tbody>` and `<td>` tags to populate the rows with size data measurements.
+5. Save the file and preview it using Live Server.
+
+## Code Example (`size-chart.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Size Chart</title>
+</head>
+<body>
+    <header>
+        <h1>Product Size Chart</h1>
+        <p>Find your perfect fit with our standard measurement guide.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Clothing Size Guide (Inches)</h2>
+            <table border="1" cellpadding="8" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Size</th>
+                        <th>Chest</th>
+                        <th>Waist</th>
+                        <th>Length</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>S</td>
+                        <td>36-38</td>
+                        <td>30-32</td>
+                        <td>27</td>
+                    </tr>
+                    <tr>
+                        <td>M</td>
+                        <td>38-40</td>
+                        <td>32-34</td>
+                        <td>28</td>
+                    </tr>
+                    <tr>
+                        <td>L</td>
+                        <td>40-42</td>
+                        <td>34-36</td>
+                        <td>29</td>
+                    </tr>
+                    <tr>
+                        <td>XL</td>
+                        <td>42-44</td>
+                        <td>36-38</td>
+                        <td>30</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nirbhay Thakur. All rights reserved.</p>
+    </footer>
+</body>
+</html>

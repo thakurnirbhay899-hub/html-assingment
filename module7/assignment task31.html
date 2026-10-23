@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responsive navigation menu bar using display:flex by Nirbhay Thakur.">
+  <title>Flexbox Menu Bar – Nirbhay Thakur</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background-color: #f8fafc;
+      color: #0f172a;
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #0f291e; /* Deep Forest Green */
+      padding: 0 1.5rem;
+      flex-wrap: wrap;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu__brand {
+      color: #ffffff;
+      font-weight: 800;
+      font-size: 1.3rem;
+      padding: 1rem 0;
+      letter-spacing: -0.5px;
+    }
+
+    .menu__brand span {
+      color: #10b981; /* Emerald accent */
+    }
+
+    .menu__list {
+      display: flex;
+      list-style: none;
+    }
+
+    .menu__list a {
+      display: block;
+      color: #e2e8f0;
+      text-decoration: none;
+      padding: 1rem 1.1rem;
+      font-weight: 500;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .menu__list a:hover,
+    .menu__list a.active {
+      background: #184231;
+      color: #ffffff;
+    }
+
+    .menu__cta {
+      margin-left: 1rem;
+      background: #10b981;
+      color: #ffffff;
+      padding: 0.55rem 1.25rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s, transform 0.1s;
+    }
+
+    .menu__cta:hover {
+      background: #059669;
+    }
+
+    /* Responsive: stack on small screens */
+    @media (max-width: 640px) {
+      .menu {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 0;
+      }
+
+      .menu__brand {
+        text-align: center;
+        padding: 1rem 0 0.5rem;
+      }
+
+      .menu__list {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .menu__cta {
+        margin: 0.75rem 1rem 1rem;
+        text-align: center;
+      }
+    }
+
+    main {
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    main h1 {
+      font-size: 1.75rem;
+      margin-bottom: 0.75rem;
+      color: #0f172a;
+    }
+
+    main p {
+      color: #475569;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="menu" aria-label="Main">
+    <div class="menu__brand">Nirbhay Thakur</div>
+    <ul class="menu__list">
+      <li><a class="active" href="#">Home</a></li>
+      <li><a href="#">Projects</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+    <a class="menu__cta" href="#">Get in touch</a>
+  </nav>
+
+  <main>
+    <h1>Flexbox Responsive Navigation</h1>
+    <p>Resize your browser window below 640px to see the navigation bar automatically re-align into a stacked mobile layout.</p>
+  </main>
+</body>
+
+</html>

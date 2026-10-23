@@ -1,0 +1,45 @@
+# Assignment 12 - Ensure every image on the portfolio page has a meaningful alt attribute
+
+In this assignment, you need to ensure that every image on your portfolio page includes a descriptive and meaningful `alt` attribute for accessibility and SEO purposes[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span).
+
+## Steps & Instructions
+1. Open your portfolio HTML file (`portfolio.html`).
+2. Add image tags (`<img>`) wherever necessary (such as a profile picture or project screenshots).
+3. Write clear, descriptive text inside the `alt` attribute (avoid generic words like "image" or "photo").
+4. Save the file and verify the markup.
+
+## Code Example (`portfolio.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Alt Attributes</title>
+</head>
+<body>
+    <header>
+        <h1>Nirbhay Thakur</h1>
+        <p>BCA Artificial Intelligence Student</p>
+        <!-- Meaningful alt attribute for profile picture -->
+        <img src="my photo.jpg" alt="Profile photograph of Nirbhay Thakur, BCA AI student at Invertis University" width="150">
+    </header>
+
+    <main>
+        <section id="projects">
+            <h2>Projects</h2>
+            <div>
+                <h3>Landslide Risk Monitoring System</h3>
+                <!-- Meaningful alt attribute for project screenshot -->
+                <img src="project-preview.png" alt="Dashboard screenshot of AI-based early warning and landslide risk monitoring system" width="300">
+                <p>An early warning system developed for hilly regions.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nirbhay Thakur. All rights reserved.</p>
+    </footer>
+</body>
+</html>

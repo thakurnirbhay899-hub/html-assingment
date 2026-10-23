@@ -1,0 +1,141 @@
+# Assignment 30 - Build a Fully Responsive Multi-Section Landing Page
+
+In this assignment, you need to combine everything you've learned (Flexbox, CSS Grid, and Media Queries) to create a fully responsive multi-section landing page that looks great on both mobile devices and desktops.
+
+## Steps & Instructions
+1. Create or open your file named `assignment task30.html` in `module6`.
+2. Structure the page with a header/nav (using Flexbox), a hero section, and a services/projects section (using CSS Grid).
+3. Add CSS Media Queries to make sure the layout stacks or adjusts smoothly on smaller mobile screens.
+4. Save the file and preview it using Live Server.
+
+## Code Example (`assignment task30.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Landing Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f7f6;
+            color: #333;
+        }
+
+        /* Flexbox Header */
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('[https://picsum.photos/1200/400](https://picsum.photos/1200/400)');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        .hero h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        /* CSS Grid Services Section */
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .card h3 {
+            color: #3498db;
+        }
+
+        /* Responsive Media Query */
+        @media (max-width: 768px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+            }
+            nav {
+                margin-top: 15px;
+            }
+            nav a {
+                margin: 0 10px;
+            }
+            .hero h1 {
+                font-size: 1.8em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Nirbhay Thakur</div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Welcome to My Responsive Website</h1>
+        <p>Built using HTML5, CSS Flexbox, Grid, and Media Queries.</p>
+    </section>
+
+    <main class="container">
+        <h2 style="text-align: center; margin-bottom: 30px;">Our Services</h2>
+        <div class="grid-cards">
+            <div class="card">
+                <h3>Web Design</h3>
+                <p>Creating clean, modern, and user-friendly layouts.</p>
+            </div>
+            <div class="card">
+                <h3>AI Solutions</h3>
+                <p>Integrating smart tools and data-driven approaches.</p>
+            </div>
+            <div class="card">
+                <h3>Responsive Code</h3>
+                <p>Ensuring seamless viewing across mobile, tablet, and desktop.</p>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

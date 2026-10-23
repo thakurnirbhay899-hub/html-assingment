@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Kerner auto-reflowing product grid built with CSS Grid by Nirbhay Thakur.">
+  <title>Kerner Store – Nirbhay Thakur</title>
+  <style>
+    :root {
+      --forest-green: #0f291e;
+      --emerald-accent: #10b981;
+      --emerald-dark: #059669;
+      --bg-light: #f0fdf4;
+      --card-bg: #ffffff;
+      --text-dark: #0f291e;
+      --text-muted: #64748b;
+      --card-border: #d1fae5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      padding: 0 0 2.5rem 0;
+    }
+
+    header {
+      background: var(--forest-green);
+      padding: 1.25rem 1.5rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: #ffffff;
+      letter-spacing: -0.5px;
+    }
+
+    header h1 span {
+      color: var(--emerald-accent);
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(255, 255, 255, 0.1);
+      color: #e2e8f0;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 0.25rem 0.85rem;
+      border-radius: 999px;
+      margin-top: 0.4rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem 1rem;
+    }
+
+    .subtitle {
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.75rem;
+    }
+
+    /* Auto-fit CSS Grid with minmax */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 0.85rem;
+      border: 1px solid var(--card-border);
+      box-shadow: 0 4px 12px rgba(15, 41, 30, 0.05);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(15, 41, 30, 0.12);
+      border-color: var(--emerald-accent);
+    }
+
+    .card__tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--emerald-dark);
+      color: #ffffff;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+
+    .card img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .card__body {
+      margin-top: 0.75rem;
+    }
+
+    .card h2 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-dark);
+      margin-bottom: 0.25rem;
+      line-height: 1.3;
+    }
+
+    .card__qty {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 0.75rem;
+    }
+
+    .card__footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: auto;
+    }
+
+    .price {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .price strong {
+      color: var(--emerald-dark);
+      font-weight: 800;
+      font-size: 1.05rem;
+    }
+
+    .price s {
+      color: #94a3b8;
+      font-size: 0.75rem;
+    }
+
+    .add-btn {
+      background: var(--forest-green);
+      color: #ffffff;
+      border: 0;
+      padding: 0.45rem 1rem;
+      border-radius: 6px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .add-btn:hover {
+      background: var(--emerald-accent);
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Kerner <span>Store</span></h1>
+    <div class="badge">Essential Developer Hardware & Electronics</div>
+  </header>
+
+  <div class="container">
+    <p class="subtitle">Auto-responsive grid layout that adjusts dynamically based on screen size.</p>
+
+    <div class="grid">
+      <!-- Item 1 -->
+      <div class="card">
+        <span class="card__tag">15% OFF</span>
+        <img src="https://picsum.photos/id/119/400/400" alt="Pro Developer Laptop">
+        <div class="card__body">
+          <h2>Kerner Workstation 14"</h2>
+          <p class="card__qty">M-Series / 32GB RAM</p>
+        </div>
+        <div class="card__footer">
+          <div class="price">
+            <strong>₹84,999</strong>
+            <s>₹99,999</s>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+
+      <!-- Item 2 -->
+      <div class="card">
+        <img src="https://picsum.photos/id/160/400/400" alt="Mechanical Keyboard">
+        <div class="card__body">
+          <h2>Mechanical Keychron</h2>
+          <p class="card__qty">Tactile Switches / RGB</p>
+        </div>
+        <div class="card__footer">
+          <div class="price">
+            <strong>₹6,499</strong>
+            <s>₹7,499</s>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+
+      <!-- Item 3 -->
+      <div class="card">
+        <span class="card__tag">BESTSELLER</span>
+        <img src="https://picsum.photos/id/201/400/400" alt="ANC Headphones">
+        <div class="card__body">
+          <h2>Studio ANC Headphones</h2>
+          <p class="card__qty">30h Battery / Wireless</p>
+        </div>
+        <div class="card__footer">
+          <div class="price">
+            <strong>₹5,299</strong>
+            <s>₹6,999</s>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+
+      <!-- Item 4 -->
+      <div class="card">
+        <img src="https://picsum.photos/id/175/400/400" alt="Smartwatch">
+        <div class="card__body">
+          <h2>Eco Smartwatch Pro</h2>
+          <p class="card__qty">GPS / Health Sensor</p>
+        </div>
+        <div class="card__footer">
+          <div class="price">
+            <strong>₹4,499</strong>
+            <s>₹5,999</s>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+
+      <!-- Item 5 -->
+      <div class="card">
+        <img src="https://picsum.photos/id/367/400/400" alt="Curved Monitor">
+        <div class="card__body">
+          <h2>4K Curved Display</h2>
+          <p class="card__qty">27" / IPS Panel</p>
+        </div>
+        <div class="card__footer">
+          <div class="price">
+            <strong>₹24,999</strong>
+            <s>₹29,999</s>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+
+      <!-- Item 6 -->
+      <div class="card">
+        <span class="card__tag">HOT DEAL</span>
+        <img src="https://picsum.photos/id/250/400/400" alt="4K Action Camera">
+        <div class="card__body">
+          <h2>4K Studio Lens Camera</h2>
+          <p class="card__qty">24MP / Ultra HD</p>
+        </div>
+        <div class="card__footer">
+          <div class="price">
+            <strong>₹38,999</strong>
+            <s>₹45,000</s>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+
+      <!-- Item 7 -->
+      <div class="card">
+        <img src="https://picsum.photos/id/1060/400/400" alt="Coffee Grinder">
+        <div class="card__body">
+          <h2>Smart Espresso Mug</h2>
+          <p class="card__qty">Temperature Control</p>
+        </div>
+        <div class="card__footer">
+          <div class="price">
+            <strong>₹2,499</strong>
+            <s>₹3,199</s>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+
+      <!-- Item 8 -->
+      <div class="card">
+        <img src="https://picsum.photos/id/180/400/400" alt="Desk Mat">
+        <div class="card__body">
+          <h2>Minimal Leather Desk Mat</h2>
+          <p class="card__qty">900x400mm / Waterproof</p>
+        </div>
+        <div class="card__footer">
+          <div class="price">
+            <strong>₹1,299</strong>
+            <s>₹1,799</s>
+          </div>
+          <button class="add-btn">Add</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

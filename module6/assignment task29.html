@@ -1,0 +1,65 @@
+# Assignment 29 - Make a Webpage Responsive Using CSS Media Queries
+
+In this assignment, you need to use CSS Media Queries (`@media`) to adapt your webpage layout and change styles based on different screen sizes (such as mobile devices and tablets).
+
+## Steps & Instructions
+1. Open or create your assignment file `assignment task29.html` in VS Code.
+2. Build a layout that looks good on desktop screens by default.
+3. Add a media query (e.g., `@media (max-width: 768px)`) to change layout properties (like stacking flex items or reducing grid columns) on smaller screens.
+4. Save the file and preview it using Live Server (use Inspect / Responsive mode in your browser to test).
+
+## Code Example (`assignment task29.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Media Queries Responsive Design</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f4f7f6;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            gap: 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .box {
+            flex: 1;
+            background-color: #3498db;
+            color: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            font-size: 1.2em;
+        }
+
+        /* Media Query for screens 768px wide or smaller (Tablets & Mobile) */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack boxes vertically on small screens */
+            }
+            .box {
+                background-color: #e74c3c; /* Change color to indicate responsiveness */
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: #2c3e50;">Responsive Design with Media Queries</h1>
+    <p style="text-align: center; color: #555;">Resize your browser window below 768px to see the layout stack vertically.</p>
+
+    <div class="container">
+        <div class="box">Box One</div>
+        <div class="box">Box Two</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,62 @@
+# Assignment 11 - Portfolio Page with Internal Navigation
+
+In this assignment, you need to create a portfolio page featuring working internal navigation using anchor links (`<a>`) that point to specific section IDs on the same page[span_1](start_span)[span_1](end_span).
+
+## Steps & Instructions
+1. Create a new file in VS Code named `portfolio.html`.
+2. Add a navigation menu at the top using anchor tags with href attributes pointing to IDs (e.g., `#about`, `#skills`, `#projects`, `#contact`)[span_2](start_span)[span_2](end_span).
+3. Create corresponding sections in the main body using matching `id` attributes (e.g., `<section id="about">`)[span_3](start_span)[span_3](end_span).
+4. Add a `<footer>` section at the bottom for copyright or footer details.
+5. Save the file and test the internal links using Live Server.
+
+## Code Example (`portfolio.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Internal Navigation</title>
+</head>
+<body>
+    <header>
+        <h1>Nirbhay Thakur</h1>
+        <nav>
+            <a href="#about">About</a> |
+            <a href="#skills">Skills</a> |
+            <a href="#projects">Projects</a> |
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>BCA Artificial Intelligence student at Invertis University, Bareilly.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>java Programming</li>
+                <li> Python Programming</li>
+            </ul>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <p>AI-Based Early Warning and Landslide Risk Monitoring System.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Get in touch via GitHub and LinkedIn.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nirbhay Thakur. All rights reserved.</p>
+    </footer>
+</body>
+</html>

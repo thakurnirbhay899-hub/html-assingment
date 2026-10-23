@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Resume with font pairing and a custom colour palette.">
+  <title>Nirbhay Thakur – Resume (Palette &amp; Fonts)</title>
+  <!-- Font pairing: Playfair Display (serif headings) + Source Sans 3 (clean body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Sans+3:wght@400;600&display=swap"
+    rel="stylesheet">
+  <style>
+    /* New Palette (60-30-10 rule - Forest Green Theme):
+        60% soft mint/cream #f2f7f4 – background
+        30% deep forest #132e22 – text & header
+        10% vibrant coral #e05a47 – accents */
+    body {
+      margin: 0;
+      font-family: 'Source Sans 3', Georgia, sans-serif;
+      background: #f2f7f4;
+      color: #132e22;
+      line-height: 1.65;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    header {
+      background: #132e22;
+      color: #f2f7f4;
+      padding: 2.5rem 1.5rem;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.6rem;
+    }
+
+    header p {
+      color: #e05a47;
+      margin: .25rem 0 0;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 1.5rem;
+    }
+
+    h2 {
+      color: #132e22;
+      border-bottom: 2px solid #e05a47;
+      display: inline-block;
+      padding-bottom: .15rem;
+    }
+
+    h3 {
+      margin-bottom: 0;
+    }
+
+    .meta {
+      color: #4a6b5d;
+      margin-top: 0;
+    }
+
+    ul.skills {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem;
+    }
+
+    ul.skills li {
+      background: #132e22;
+      color: #f2f7f4;
+      padding: .25rem .8rem;
+      border-radius: 999px;
+      font-weight: 600;
+    }
+
+    a {
+      color: #c94b38;
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      color: #4a6b5d;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Nirbhay Thakur</h1>
+    <p>Front-End Developer &amp; BCA AI Student</p>
+  </header>
+  <main>
+    <section>
+      <h2>Profile</h2>
+      <p>Motivated student[cite: 1] at Invertis University[cite: 1] who enjoys turning designs into accessible, responsive web pages.</p>
+    </section>
+    <section>
+      <h2>Education</h2>
+      <h3>BCA Artificial Intelligence (BCA AI)[cite: 1]</h3>
+      <p class="meta">Invertis University[city: 1] · <time datetime="2026">2023</time> – Ongoing[cite: 1]</p>
+    </section>
+    <section>
+      <h2>Projects</h2>
+      <h3>Personal Portfolio</h3>
+      <p class="meta">HTML5 · CSS3 · JavaScript</p>
+      <p>A multi-page, semantic, responsive website.</p>
+    </section>
+    <section>
+      <h2>Skills</h2>
+      <ul class="skills">
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>Git</li>
+        <li>GitHub</li>
+        <li>VS Code</li>
+        <li>First Principal Thinking</li>
+      </ul>
+    </section>
+    <p>Contact: <a href="mailto:thakurnirbhay899@gmail.com">thakurnirbhay899@gmail.com</a></p>
+  </main>
+  <footer><small>Fonts: Playfair Display + Source Sans 3 · Palette: mint cream / deep forest / coral</small></footer>
+</body>
+
+</html>

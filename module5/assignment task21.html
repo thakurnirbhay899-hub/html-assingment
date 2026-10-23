@@ -1,0 +1,67 @@
+# 21 - Convert One HTML-Only Page Into a Lightly Styled Page
+
+In this assignment, you need to take one of your HTML-only pages from Module 4 and add basic CSS styling (such as colors, fonts, margins, and padding) to make it look clean and structured[span_1](start_span)[span_1](end_span).
+
+## Steps & Instructions
+1. Choose an existing HTML file (e.g., `index.html` or `register.html`).
+2. Add a `<style>` block inside the `<head>` section, or create an external `style.css` file and link it using `<link rel="stylesheet" href="style.css">`.
+3. Apply basic styles to the body, headings, paragraphs, and containers (e.g., background color, font family, text alignment, and spacing).
+4. Save the file and preview the styled page using Live Server.
+
+## Code Example (`styled-page.html`)
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lightly Styled Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #0066cc;
+            color: #fff;
+            padding: 15px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        main {
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to My Styled Page</h1>
+    </header>
+
+    <main>
+        <section>
+            <h2>Introduction</h2>
+            <p>This page has been enhanced with basic CSS styling to improve its visual appearance and readability.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Nirbhay Thakur. All rights reserved.</p>
+    </footer>
+</body>
+</html>

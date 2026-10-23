@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfolio magazine layout built with CSS Grid by Nirbhay Thakur.">
+  <title>NirbhayThakur – Kerner Portfolio</title>
+  <style>
+    :root {
+      --ink: #0f291e;        
+      --paper: #deffe9;     
+      --accent: #10b981;     
+      --accent-dark: #059669;
+      --card-bg: #ffffff;
+      --border-color: #d1fae5;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.6;
+    }
+
+    .layout {
+      display: grid;
+      max-width: 1200px;
+      margin: 0 auto;
+      gap: 1.5rem;
+      padding: 1.5rem;
+      grid-template-columns: repeat(12, 1fr);
+      grid-template-areas:
+        "head   head   head   head   head   head   head   head   head   head   head   head"
+        "hero   hero   hero   hero   hero   hero   hero   about  about  about  about  about"
+        "p1     p1     p1     p2     p2     p2     p3     p3     p3     p4     p4     p4"
+        "skills skills skills skills skills skills contact contact contact contact contact contact"
+        "foot   foot   foot   foot   foot   foot   foot   foot   foot   foot   foot   foot";
+    }
+
+    .head {
+      grid-area: head;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid var(--ink);
+      padding-bottom: 0.85rem;
+    }
+
+    .head h1 {
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+
+    .head h1 span {
+      color: var(--accent);
+    }
+
+    .head nav a {
+      margin-left: 1.25rem;
+      color: var(--ink);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.2s;
+    }
+
+    .head nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      grid-area: hero;
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      min-height: 320px;
+      box-shadow: 0 4px 14px rgba(15, 41, 30, 0.1);
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 41, 30, 0.2) 0%, rgba(15, 41, 30, 0.85) 100%);
+    }
+
+    .hero h2 {
+      position: absolute;
+      left: 1.75rem;
+      bottom: 1.75rem;
+      color: #ffffff;
+      font-size: 2.1rem;
+      font-weight: 800;
+      line-height: 1.25;
+      max-width: 20ch;
+    }
+
+    .about {
+      grid-area: about;
+      background: var(--ink);
+      color: #ffffff;
+      padding: 1.75rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about h2 {
+      color: var(--accent);
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .about p {
+      color: #e2e8f0;
+      font-size: 0.95rem;
+    }
+
+    .p1 {
+      grid-area: p1;
+    }
+
+    .p2 {
+      grid-area: p2;
+    }
+
+    .p3 {
+      grid-area: p3;
+    }
+
+    .p4 {
+      grid-area: p4;
+    }
+
+    .project {
+      border: 1px solid var(--border-color);
+      padding: 1.25rem;
+      border-radius: 12px;
+      background: var(--card-bg);
+      box-shadow: 0 4px 12px rgba(15, 41, 30, 0.04);
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent);
+    }
+
+    .project h3 {
+      color: var(--ink);
+      font-size: 1.1rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .project p {
+      color: #475569;
+      font-size: 0.9rem;
+    }
+
+    .skills {
+      grid-area: skills;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: 12px;
+    }
+
+    .skills h2 {
+      font-size: 1.3rem;
+      color: var(--ink);
+    }
+
+    .skills ul {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+      list-style: none;
+      padding: 0;
+      margin-top: 0.75rem;
+    }
+
+    .skills li {
+      background: var(--paper);
+      border: 1px solid var(--border-color);
+      padding: 0.5rem;
+      text-align: center;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 0.9rem;
+      color: var(--ink);
+    }
+
+    .contact {
+      grid-area: contact;
+      background: #e6f4ea;
+      border: 1px solid var(--border-color);
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .contact h2 {
+      color: var(--ink);
+      font-size: 1.3rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .contact p {
+      color: #374151;
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .foot {
+      grid-area: foot;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      padding-top: 1.25rem;
+      font-size: 0.9rem;
+      color: #64748b;
+    }
+
+    @media (max-width: 900px) {
+      .layout {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas:
+          "head head"
+          "hero hero"
+          "about about"
+          "p1 p2"
+          "p3 p4"
+          "skills skills"
+          "contact contact"
+          "foot foot";
+      }
+    }
+
+    @media (max-width: 520px) {
+      .layout {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "head"
+          "hero"
+          "about"
+          "p1"
+          "p2"
+          "p3"
+          "p4"
+          "skills"
+          "contact"
+          "foot";
+      }
+
+      .head {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+
+      .head nav {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .head nav a {
+        margin-left: 0;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="layout">
+    <header class="head">
+      <h1>Nirbhay Thakur </h1>
+      <nav>
+        <a href="#work">Work</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <img src="https://picsum.photos/id/180/1000/600" alt="Developer setup with laptop showing a coding dashboard">
+      <div class="hero__overlay"></div>
+      <h2>Architecting intelligent web platforms &amp; modern layouts.</h2>
+    </section>
+
+    <section class="about">
+      <h2>About Me</h2>
+      <p>BCA AI Student passionate about custom design systems, responsive layout architecture, and scalable full-stack web applications.</p>
+    </section>
+
+    <article class="project p1" id="work">
+      <h3>⚡ Kerner Store</h3>
+      <p>CSS Grid store-front layout with custom filter sidebars.</p>
+    </article>
+
+    <article class="project p2">
+      <h3>🔐 Login System</h3>
+      <p>Centred Flexbox authentication portal with focus effects.</p>
+    </article>
+
+    <article class="project p3">
+      <h3>🖼️ Apple Photos Grid</h3>
+      <p>Glassmorphic image gallery with dynamic spans.</p>
+    </article>
+
+    <article class="project p4">
+      <h3>📊 Analytics Hub</h3>
+      <p>Named grid area dashboard with weekly telemetry metrics.</p>
+    </article>
+
+    <section class="skills" id="skills">
+      <h2>Technical Stack</h2>
+      <ul>
+        <li>HTML5 / CSS3</li>
+        <li>CSS Grid</li>
+        <li>Flexbox</li>
+        <li>JavaScript</li>
+        <li>Python AI</li>
+        <li>Git / GitHub</li>
+      </ul>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2>Get in Touch</h2>
+      <p>
+        ✉️ thakurnirbhay899@gmail.com<br>
+        📍 Bareilly, India
+      </p>
+    </section>
+
+    <footer class="foot">
+      &copy; 2026 Nirbhay Thakur · Kerner Brand Identity
+    </footer>
+  </div>
+</body>
+
+</html>

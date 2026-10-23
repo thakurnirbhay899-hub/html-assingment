@@ -1,0 +1,185 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Forest themed product listing built with flex-wrap by Nirbhay Thakur." />
+  <title>Tech Store – Nirbhay Thakur</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #f0fdf4;
+      color: #0f291e;
+    }
+
+    header {
+      background: #0f291e;
+      color: #fff;
+      padding: 1.25rem 2rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: -0.5px;
+    }
+
+    header h1 span {
+      color: #10b981;
+    }
+
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 2rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .product {
+      flex: 1 1 240px;
+      max-width: 300px;
+      background: #ffffff;
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 14px rgba(15, 41, 30, 0.08);
+      border: 1px solid #d1fae5;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(15, 41, 30, 0.12);
+    }
+
+    .product img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .product__body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .product__body h2 {
+      font-size: 1.1rem;
+      margin: 0 0 0.4rem;
+      color: #0f291e;
+    }
+
+    .product__body p {
+      margin: 0 0 1.25rem;
+      color: #374151;
+      font-size: 0.9rem;
+      line-height: 1.5;
+    }
+
+    .product__footer {
+      margin-top: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-top: 0.5rem;
+    }
+
+    /* pushes price row to bottom */
+    .price {
+      font-weight: 700;
+      font-size: 1.15rem;
+      color: #059669;
+    }
+
+    button {
+      background: #0f291e;
+      color: #fff;
+      border: 0;
+      padding: 0.55rem 1.1rem;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    button:hover {
+      background: #10b981;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Thakur Tech <span>Store</span></h1>
+  </header>
+  <main class="products">
+    <article class="product">
+      <img src="https://picsum.photos/id/119/400/300" alt="MacBook on desk" />
+      <div class="product__body">
+        <h2>AI Workstation Laptop</h2>
+        <p>Engineered for high-performance machine learning models, neural training, and heavy development workflows.</p>
+        <div class="product__footer">
+          <span class="price">₹89,999</span><button>Add to Cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://picsum.photos/id/367/400/300" alt="Minimalist desk monitor setup" />
+      <div class="product__body">
+        <h2>4K Ultrawide Monitor</h2>
+        <p>Ergonomic curved display featuring true color accuracy and ambient eye-care technology for long coding sessions.</p>
+        <div class="product__footer">
+          <span class="price">₹32,499</span><button>Add to Cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://picsum.photos/id/160/400/300" alt="Mechanical keyboard on desk" />
+      <div class="product__body">
+        <h2>Custom Keychron Board</h2>
+        <p>Hot-swappable tactile switches with custom forest green keycaps and per-key RGB backlighting.</p>
+        <div class="product__footer">
+          <span class="price">₹6,899</span><button>Add to Cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://picsum.photos/id/175/400/300" alt="Digital watch on wrist" />
+      <div class="product__body">
+        <h2>Eco Smartwatch Pro</h2>
+        <p>Solar-assisted charging with heart rate telemetry, GPS routing, and outdoor fitness analytics.</p>
+        <div class="product__footer">
+          <span class="price">₹4,999</span><button>Add to Cart</button>
+        </div>
+      </div>
+    </article>
+
+    <article class="product">
+      <img src="https://picsum.photos/id/201/400/300" alt="Over-ear studio headphones" />
+      <div class="product__body">
+        <h2>Active ANC Headphones</h2>
+        <p>Precision audio drivers paired with hybrid noise cancellation and an ultra-soft memory foam headband.</p>
+        <div class="product__footer">
+          <span class="price">₹5,499</span><button>Add to Cart</button>
+        </div>
+      </div>
+    </article>
+  </main>
+</body>
+
+</html>
